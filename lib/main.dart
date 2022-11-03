@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todoey_hive/models/task.dart';
-import 'package:todoey_hive/models/task_data.dart';
 import 'screens/tasks_screen.dart';
-import 'package:provider/provider.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
@@ -13,12 +10,12 @@ void main() async {
   await Hive.openBox<Task>('tasks');
 
   runApp(
-    MyApp(),
+    const MyApp(),
   );
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();

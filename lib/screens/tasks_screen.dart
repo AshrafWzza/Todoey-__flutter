@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:hive/hive.dart';
 import 'package:todoey_hive/screens/add_task_screen.dart';
 import 'package:todoey_hive/widgets/task_list.dart';
-import 'package:provider/provider.dart';
-import 'package:todoey_hive/models/task_data.dart';
 import 'package:todoey_hive/models/boxes.dart';
 import 'package:todoey_hive/models/task.dart';
-import 'package:todoey_hive/models/task_data.dart';
 
 class TasksScreen extends StatefulWidget {
   const TasksScreen({Key? key}) : super(key: key);
@@ -69,9 +65,9 @@ class _TasksScreenState extends State<TasksScreen> {
               padding: const EdgeInsets.all(30.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(width: double.infinity),
-                  const CircleAvatar(
+                children: const [
+                  SizedBox(width: double.infinity),
+                  CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 30.0,
                     child: Icon(
@@ -80,10 +76,10 @@ class _TasksScreenState extends State<TasksScreen> {
                       color: Colors.lightBlueAccent,
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20.0,
                   ),
-                  const Text(
+                  Text(
                     'Todoey',
                     style: TextStyle(
                       fontSize: 45.0,

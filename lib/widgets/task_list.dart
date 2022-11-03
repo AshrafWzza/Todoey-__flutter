@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:todoey_hive/models/task.dart';
 import 'package:todoey_hive/models/task_data.dart';
 
 class TaskList extends StatelessWidget {
-  List<Task> tasks;
-  TaskList({Key? key, required this.tasks}) : super(key: key);
+  final List<Task> tasks;
+  const TaskList({Key? key, required this.tasks}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     if (tasks.isEmpty) {
